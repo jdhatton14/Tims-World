@@ -22,18 +22,18 @@ const imageStyle = StyleSheet.create({
   }
 });
 
-export default class QuestionOneScreen extends Component {
+export default class QuestionTwoScreen extends Component {
   
 
     render() {
       return (
         <View style={styles.container}>
           <ImageBackground style={imageStyle.image} source={tim}>
-            <Text style={styles.text}>Where does Tim live?</Text>
-            <RightWrongButton buttonTitle={"Omaha, NE"} rightWrong={false} screenName={"QuestionOne"} />
-            <RightWrongButton buttonTitle={"Farmville, MN"} rightWrong={false} screenName={"QuestionOne"} />
-            <RightWrongButton buttonTitle={"Ames, IA"} rightWrong={false} screenName={"QuestionOne"} />
-            <RightWrongButton buttonTitle={"'The Hood'"} rightWrong={true} screenName={"QuestionTwo"} />
+            <Text style={styles.text}>How much ketchup does Tim use?</Text>
+            <RightWrongButton buttonTitle={"1 tbsp"} rightWrong={false} screenName={"QuestionOne"} />
+            <RightWrongButton buttonTitle={"2 tbsp"} rightWrong={false} screenName={"QuestionFour"} />
+            <RightWrongButton buttonTitle={"A metric ton"} rightWrong={false} screenName={"QuestionTwo"} />
+            <RightWrongButton buttonTitle={"yes"} rightWrong={true} screenName={"QuestionFour"} />
           </ImageBackground>
          
          

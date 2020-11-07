@@ -29,11 +29,11 @@ export default class QuestionTwoScreen extends Component {
       return (
         <View style={styles.container}>
           <ImageBackground style={imageStyle.image} source={tim}>
-            <Text>What season does Tim thrive in?</Text>
+            <Text style={styles.text}>What season does Tim thrive in?</Text>
             <RightWrongButton buttonTitle={"Summer"} rightWrong={false} screenName={"QuestionOne"} />
             <RightWrongButton buttonTitle={"Fall"} rightWrong={false} screenName={"QuestionOne"} />
             <RightWrongButton buttonTitle={"Spring"} rightWrong={false} screenName={"QuestionTwo"} />
-            <RightWrongButton buttonTitle={"Winter"} rightWrong={true} screenName={"QuestionTwo"} />
+            <RightWrongButton buttonTitle={"Winter"} rightWrong={true} screenName={"QuestionThree"} />
           </ImageBackground>
          
          
@@ -62,5 +62,8 @@ const styles = StyleSheet.create({
   title1: {
     fontSize: 25,
     fontWeight: 'bold'
+  },
+  text: {
+    textAlign: 'center'
   }
 });

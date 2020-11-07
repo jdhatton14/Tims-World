@@ -21,7 +21,7 @@ export type QuestionParamList = {
   QuestionOne: undefined;
   QuestionTwo: undefined;
   QuestionThree: undefined;
-  QuetionFour: undefined;
+  QuestionFour: undefined;
   QuestionFive: undefined; 
 }
 

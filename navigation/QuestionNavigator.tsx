@@ -6,7 +6,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import QuestionOneScreen from '../screens/QuestionOneScreen';
 import QuestionTwoScreen from '../screens/QuestionTwoScreen';
-import {QuestionOneParamList, QuestionParamList, QuestionTwoParamList } from '../types';
+import QuestionThreeScreen from '../screens/QuestionThreeScreen';
+import QuestionFourScreen from '../screens/QuestionFourScreen';
+import {QuestionOneParamList, QuestionParamList, QuestionTwoParamList, QuestionThreeParamList, QuestionFourParamList} from '../types';
 
 const QuestionTab = createStackNavigator<QuestionParamList>();
 
@@ -23,6 +25,14 @@ export default function QuestionNavigator() {
        <QuestionTab.Screen
         name="QuestionTwo"
         component={QuestionTwoNavigator}
+      />
+      <QuestionTab.Screen
+        name="QuestionThree"
+        component={QuestionThreeNavigator}
+      />
+      <QuestionTab.Screen
+        name="QuestionFour"
+        component={QuestionFourNavigator}
       />
      
 
@@ -59,3 +69,32 @@ function QuestionTwoNavigator() {
   </QuestionTwoStack.Navigator>
   );
 }
+
+const QuestionThreeStack = createStackNavigator<QuestionThreeParamList>();
+
+function QuestionThreeNavigator() {
+  return (
+    <QuestionThreeStack.Navigator>
+      <QuestionThreeStack.Screen
+        name="QuestionThreeScreen"
+        component={QuestionThreeScreen}
+        options={{ headerTitle: 'Question Three' }}
+      />
+  </QuestionThreeStack.Navigator>
+  );
+}
+
+const QuestionFourStack = createStackNavigator<QuestionFourParamList>();
+
+function QuestionFourNavigator() {
+  return (
+    <QuestionFourStack.Navigator>
+      <QuestionFourStack.Screen
+        name="QuestionFourScreen"
+        component={QuestionFourScreen}
+        options={{ headerTitle: 'Question Four' }}
+      />
+  </QuestionFourStack.Navigator>
+  );
+}
+
